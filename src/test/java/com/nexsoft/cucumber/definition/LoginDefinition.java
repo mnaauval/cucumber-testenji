@@ -45,20 +45,20 @@ public class LoginDefinition {
 		home.clickSignIn();
 	}
 
-//	@When("User input username as {string}")
-//	public void inputValidUname(String uname) throws Throwable {
-//		signIn.setUname(uname);
-//	}
+	@When("User input usernamevalid as {string}")
+	public void inputValidUname(String uname) throws Throwable {
+		signIn.setUname(uname);
+	}
 
 	@When("^User input username (.*)$")
 	public void inputNotValidUname(String uname) throws Throwable {
 		signIn.setUname(uname);
 	}
 
-//	@And("User input password as {string}")
-//	public void inputValidPasswd(String passwd) throws Throwable {
-//		signIn.setPassword(passwd);
-//	}
+	@And("User input passwordvalid as {string}")
+	public void inputValidPasswd(String passwd) throws Throwable {
+		signIn.setPassword(passwd);
+	}
 
 	@When("^User input password (.*)$")
 	public void inputNotValidPasswd(String passwd) throws Throwable {
