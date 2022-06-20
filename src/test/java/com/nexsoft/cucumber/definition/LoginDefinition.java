@@ -41,43 +41,43 @@ public class LoginDefinition {
 	}
 
 	@Given("User at Login page")
-	public void goToLogin() throws Throwable {
+	public void goToLogin()  {
 		home.clickSignIn();
 	}
 
 	@When("User input usernamevalid as {string}")
-	public void inputValidUname(String uname) throws Throwable {
+	public void inputValidUname(String uname)  {
 		signIn.setUname(uname);
 	}
 
 	@When("^User input username (.*)$")
-	public void inputNotValidUname(String uname) throws Throwable {
+	public void inputNotValidUname(String uname)  {
 		signIn.setUname(uname);
 	}
 
 	@And("User input passwordvalid as {string}")
-	public void inputValidPasswd(String passwd) throws Throwable {
+	public void inputValidPasswd(String passwd)  {
 		signIn.setPassword(passwd);
 	}
 
 	@When("^User input password (.*)$")
-	public void inputNotValidPasswd(String passwd) throws Throwable {
+	public void inputNotValidPasswd(String passwd)  {
 		signIn.setPassword(passwd);
 	}
 
 	@And("User click login button")
-	public void clickBtn() throws Throwable {
+	public void clickBtn()  {
 		signIn.clickBtnSignIn();
 	}
 
 	@Then("User login to Dashboard page")
-	public void goToDashboard() throws Throwable {
+	public void goToDashboard()  {
 		signIn.dashboardPage();
 	}
 
 //  show error message
 	@Then("Login page show error message")
-	public void errorMessage() throws Throwable {
+	public void errorMessage()  {
 		signIn.forgetPasswordPage();
 	}
 
